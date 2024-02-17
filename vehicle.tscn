@@ -10,7 +10,7 @@ font_color = Color(0, 0, 0, 1)
 [node name="CharacterBody2D" type="CharacterBody2D"]
 motion_mode = 1
 script = ExtResource("1_frylf")
-base_speed = 50
+base_speed = 1
 metadata/_edit_group_ = true
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]

@@ -14,9 +14,9 @@ var selected_unit:Unit :
 		return selected_unit
 
 var selected_location:String
-		
 
-var cases: Array[Case] = []
+
+var cases: = {}
 var locations = {}
 var vehicles = {
 	"police": [],
@@ -24,6 +24,9 @@ var vehicles = {
 	"fire": [],
 	"animal control": []
 }
+
+var completed_cases:int = 0
+var score:int = 0
 
 
 # Called when the node enters the scene tree for the first time.
@@ -34,7 +37,8 @@ func _ready():
 		new_case.unit = c[1]
 		new_case.location = c[2]
 		new_case.description = c[3]
-		cases.append(new_case)
+		cases[str(new_case.number)] = new_case
+	print(cases)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

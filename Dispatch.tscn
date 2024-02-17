@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bidjayyvpos83"]
+[gd_scene load_steps=15 format=3 uid="uid://bidjayyvpos83"]
 
 [ext_resource type="Script" path="res://Dispatch.gd" id="1_0w06a"]
 [ext_resource type="Script" path="res://UnitList.gd" id="2_fx1i6"]
@@ -22,6 +22,12 @@ font_size = 24
 [sub_resource type="LabelSettings" id="LabelSettings_m18u1"]
 font_size = 24
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tth0a"]
+bg_color = Color(0.203922, 0.203922, 0.203922, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_yvoo6"]
+font_size = 48
+
 [sub_resource type="LabelSettings" id="LabelSettings_td28p"]
 font_size = 72
 
@@ -35,6 +41,7 @@ offset_bottom = -410.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_0w06a")
+metadata/_edit_vertical_guides_ = [507.0, 1920.0]
 
 [node name="Map" parent="." instance=ExtResource("6_qfim2")]
 position = Vector2(509, 1)
@@ -281,6 +288,46 @@ label_settings = SubResource("LabelSettings_m18u1")
 layout_mode = 2
 size_flags_vertical = 3
 
+[node name="Panel" type="Panel" parent="TabContainer/Send Unit"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 493.5
+offset_top = -127.5
+offset_right = 915.5
+offset_bottom = 116.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_tth0a")
+
+[node name="Label" type="Label" parent="TabContainer/Send Unit/Panel"]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 52.0
+offset_right = 368.0
+offset_bottom = 139.0
+text = "Are you sure?"
+label_settings = SubResource("LabelSettings_yvoo6")
+
+[node name="Confirm" type="Button" parent="TabContainer/Send Unit/Panel"]
+offset_left = 226.0
+offset_top = 170.0
+offset_right = 310.0
+offset_bottom = 211.0
+text = "Confirm"
+
+[node name="Back" type="Button" parent="TabContainer/Send Unit/Panel"]
+layout_mode = 0
+offset_left = 105.0
+offset_top = 169.0
+offset_right = 189.0
+offset_bottom = 210.0
+text = "Cancel"
+
 [node name="Confirmation" type="Control" parent="TabContainer"]
 visible = false
 layout_mode = 2
@@ -310,5 +357,7 @@ vertical_alignment = 1
 [connection signal="pressed" from="TabContainer/Send Unit/BackButton" to="TabContainer/Send Unit" method="_on_back_button_pressed"]
 [connection signal="pressed" from="TabContainer/Send Unit/SendButton" to="TabContainer/Send Unit" method="_on_send_button_pressed"]
 [connection signal="item_selected" from="TabContainer/Send Unit/VBoxContainer/OptionButton" to="TabContainer/Send Unit" method="_on_option_button_item_selected"]
+[connection signal="pressed" from="TabContainer/Send Unit/Panel/Confirm" to="TabContainer/Send Unit" method="_on_confirm_pressed"]
+[connection signal="pressed" from="TabContainer/Send Unit/Panel/Back" to="TabContainer/Send Unit" method="_on_back_button_pressed"]
 
 [editable path="Map"]

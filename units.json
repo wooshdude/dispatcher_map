@@ -1,16 +1,8 @@
 {
 	"units": {
-		"police": 2,
-		"ems": 1,
-		"fire": 1,
-		"animal control": 0
-	},
-	
-	"locations": [
-		"24 parker st",
-		"420 blazeit ave",
-		"the balls house!",
-		"294 bad guy rd",
-		"9283 catstuckinatree ct"
-	]
+		"police": 3,
+		"ems": 2,
+		"fire": 2,
+		"animal control": 1
+	}
 }

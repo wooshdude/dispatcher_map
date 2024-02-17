@@ -7,6 +7,7 @@ var vehicles = []
 
 signal deploy(num, new_position)
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	for location in locations:

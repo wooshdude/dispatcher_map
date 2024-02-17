@@ -1,0 +1,34 @@
+0453c2224f3a23d633b93278348c95c7
+::res://::1708140784
+buttons.gd::GDScript::-1::1708139719::0::1::::<>Node2D<>::
+buttons.tscn::PackedScene::8228871192238606695::1708139719::0::1::::<><>::res://buttons.gd<>res://Panel.gd
+case.gd::GDScript::-1::1708139719::0::1::::Case<>Resource<>::
+Cases - Role(1).csv::Resource::3824475857516997015::1708139719::1708140786::1::::<><>::res://addons/csv-data-importer/csv_data.gd
+Cases - Role(2).csv::Resource::8376997282720474956::1708139719::1708140786::1::::<><>::res://addons/csv-data-importer/csv_data.gd
+CharacterBody2D.gd::GDScript::-1::1708139719::0::1::::<>CharacterBody2D<>::
+Confirmation.gd::GDScript::-1::1708139719::0::1::::<>Control<>::
+Control.gd::GDScript::-1::1708139719::0::1::::<>Control<>::
+Dispatch.gd::GDScript::-1::1708139719::0::1::::<>Control<>::
+Dispatch.tscn::PackedScene::2954672317604908230::1708139719::0::1::::<><>::res://Dispatch.gd<>res://UnitList.gd<>res://Select Unit.gd<>res://Send Unit.gd<>res://Confirmation.gd<>uid://cpw2sgul0fojl::::res://map.tscn
+game_manager.gd::GDScript::-1::1708139719::0::1::::<>Node<>::
+icon.svg::CompressedTexture2D::3532411758067273993::1708139719::1708140786::1::::<><>::
+map.gd::GDScript::-1::1708139719::0::1::::<>Node2D<>::
+map.png::CompressedTexture2D::5054324689022497100::1708139719::1708140787::1::::<><>::
+map.tscn::PackedScene::5872762182210585869::1708139719::0::1::::<><>::res://map.gd<>uid://620t3h23r6uo::::res://sanfran_vertical.png
+Panel.gd::GDScript::-1::1708139719::0::1::::<>Panel<>::
+README.md::TextFile::-1::1708136892::0::1::::<><>::
+sanfran_vertical.png::CompressedTexture2D::2233145689774285978::1708139719::1708140787::1::::<><>::
+Select Unit.gd::GDScript::-1::1708139720::0::1::::<>Control<>::
+Send Unit.gd::GDScript::-1::1708139720::0::1::::<>Control<>::
+unit.gd::GDScript::-1::1708139720::0::1::::Unit<>Resource<>::
+UnitList.gd::GDScript::-1::1708139720::0::1::::<>Control<>::
+units.json::JSON::-1::1708139720::0::1::::<><>::
+unit_button.gd::GDScript::-1::1708139720::0::1::::UnitButton<>CheckBox<>::
+unit_button_group.tres::ButtonGroup::374666133419331112::1708139720::0::1::::<><>::
+vehicle.tscn::PackedScene::8142315489987195061::1708139720::0::1::::<><>::res://CharacterBody2D.gd<>uid://bqleknh4trl7f::::res://icon.svg
+::res://addons/::1708128909
+::res://addons/csv-data-importer/::1708139719
+csv_data.gd::GDScript::-1::1708139719::0::1::::<>Resource<>::
+import_plugin.gd::GDScript::-1::1708139719::0::1::::<>EditorImportPlugin<>::
+plugin.cfg::TextFile::-1::1708139719::0::1::::<><>::
+plugin.gd::GDScript::-1::1708139719::0::1::::<>EditorPlugin<>::
