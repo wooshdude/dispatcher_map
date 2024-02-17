@@ -1,0 +1,223 @@
+[gd_scene load_steps=5 format=3 uid="uid://dpiekocfb5spb"]
+
+[ext_resource type="Script" path="res://buttons.gd" id="1_yn8pt"]
+[ext_resource type="Script" path="res://Panel.gd" id="2_efetn"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_txmnu"]
+font_size = 36
+
+[sub_resource type="LabelSettings" id="LabelSettings_8ctnp"]
+font_size = 44
+
+[node name="Buttons" type="Node2D"]
+script = ExtResource("1_yn8pt")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 48.0
+offset_top = -166.0
+offset_right = 48.0
+offset_bottom = -166.0
+script = ExtResource("2_efetn")
+
+[node name="ColorRect" type="ColorRect" parent="Panel"]
+layout_mode = 0
+offset_top = -3.0
+offset_right = 128.0
+offset_bottom = 49.0
+color = Color(0, 0, 0, 0.74902)
+
+[node name="Label" type="RichTextLabel" parent="Panel"]
+layout_mode = 0
+offset_left = 8.0
+offset_right = 113.0
+offset_bottom = 26.0
+text = "Case Number"
+
+[node name="Label2" type="RichTextLabel" parent="Panel"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 21.0
+offset_right = 122.0
+offset_bottom = 47.0
+text = "[100,100]"
+fit_content = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1930.0
+offset_bottom = 1090.0
+color = Color(0.494118, 0.615686, 0.65098, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = 1529.0
+offset_right = 1930.0
+offset_bottom = 906.0
+color = Color(0.639216, 0.470588, 0.341176, 1)
+
+[node name="Button" type="Button" parent="."]
+offset_left = 1561.0
+offset_top = 953.0
+offset_right = 1902.0
+offset_bottom = 1031.0
+theme_override_font_sizes/font_size = 44
+text = "Dispatch"
+
+[node name="GridContainer" type="GridContainer" parent="."]
+offset_left = 48.0
+offset_top = 48.0
+offset_right = 644.0
+offset_bottom = 256.0
+scale = Vector2(2, 2)
+theme_override_constants/h_separation = 232
+theme_override_constants/v_separation = 94
+columns = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GridContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="GridContainer/VBoxContainer"]
+layout_mode = 2
+text = "Police"
+label_settings = SubResource("LabelSettings_txmnu")
+
+[node name="GridContainer" type="GridContainer" parent="GridContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 145
+theme_override_constants/v_separation = 62
+columns = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="GridContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="GridContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Fire Dept."
+label_settings = SubResource("LabelSettings_txmnu")
+
+[node name="GridContainer" type="GridContainer" parent="GridContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_constants/h_separation = 145
+theme_override_constants/v_separation = 62
+columns = 2
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="GridContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="GridContainer/VBoxContainer3"]
+layout_mode = 2
+text = "E.M.S."
+label_settings = SubResource("LabelSettings_txmnu")
+
+[node name="GridContainer" type="GridContainer" parent="GridContainer/VBoxContainer3"]
+layout_mode = 2
+theme_override_constants/h_separation = 145
+theme_override_constants/v_separation = 62
+columns = 2
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="GridContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="GridContainer/VBoxContainer4"]
+layout_mode = 2
+text = "Animal Control"
+label_settings = SubResource("LabelSettings_txmnu")
+
+[node name="GridContainer" type="GridContainer" parent="GridContainer/VBoxContainer4"]
+layout_mode = 2
+theme_override_constants/h_separation = 145
+theme_override_constants/v_separation = 62
+columns = 2
+
+[node name="DispatchMenu" type="ColorRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 472.0
+offset_top = 178.0
+offset_right = 1489.0
+offset_bottom = 1017.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.627451)
+
+[node name="Label" type="Label" parent="DispatchMenu"]
+layout_mode = 0
+offset_left = 315.0
+offset_top = 9.0
+offset_right = 670.0
+offset_bottom = 112.0
+text = "Dispatch Menu"
+label_settings = SubResource("LabelSettings_8ctnp")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LineEdit2" type="SpinBox" parent="DispatchMenu"]
+layout_mode = 0
+offset_left = 389.0
+offset_top = 312.0
+offset_right = 492.0
+offset_bottom = 365.0
+scale = Vector2(2, 2)
+min_value = 1.0
+max_value = 1000.0
+value = 1.0
+
+[node name="Label" type="Label" parent="DispatchMenu/LineEdit2"]
+layout_mode = 0
+offset_left = -6.5
+offset_top = -24.0
+offset_right = 98.5
+offset_bottom = 2.0
+text = "Case Number"
+
+[node name="LineEdit3" type="SpinBox" parent="DispatchMenu"]
+layout_mode = 0
+offset_left = 394.0
+offset_top = 478.0
+offset_right = 497.0
+offset_bottom = 531.0
+scale = Vector2(2, 2)
+min_value = 1.0
+max_value = 1000.0
+value = 1.0
+
+[node name="Label" type="Label" parent="DispatchMenu/LineEdit3"]
+layout_mode = 0
+offset_left = -6.5
+offset_top = -24.0
+offset_right = 98.5
+offset_bottom = 2.0
+text = "Vehicle"
+
+[node name="Button" type="Button" parent="DispatchMenu"]
+layout_mode = 0
+offset_left = 410.0
+offset_top = 650.0
+offset_right = 565.0
+offset_bottom = 721.0
+theme_override_font_sizes/font_size = 31
+text = "Send"
+
+[node name="MenuButton" type="MenuButton" parent="DispatchMenu"]
+layout_mode = 0
+offset_left = 228.0
+offset_top = 130.0
+offset_right = 755.0
+offset_bottom = 206.0
+keep_pressed_outside = true
+text = "Address"
+flat = false
+switch_on_hover = true
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="toggled" from="Button" to="." method="_on_button_toggled"]
+[connection signal="pressed" from="DispatchMenu/Button" to="." method="_on_send_button_pressed"]
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_http_request_request_completed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

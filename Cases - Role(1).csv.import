@@ -1,0 +1,18 @@
+[remap]
+
+importer="com.timothyqiu.godot-csv-importer"
+type="Resource"
+uid="uid://buqus80vf5d8j"
+path="res://.godot/imported/Cases - Role(1).csv-3afc647724e132e8fb25d88516448068.res"
+
+[deps]
+
+source_file="res://Cases - Role(1).csv"
+dest_files=["res://.godot/imported/Cases - Role(1).csv-3afc647724e132e8fb25d88516448068.res"]
+
+[params]
+
+delimiter=0
+headers=false
+detect_numbers=false
+force_float=true

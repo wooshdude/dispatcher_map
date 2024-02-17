@@ -1,0 +1,314 @@
+[gd_scene load_steps=13 format=3 uid="uid://bidjayyvpos83"]
+
+[ext_resource type="Script" path="res://Dispatch.gd" id="1_0w06a"]
+[ext_resource type="Script" path="res://UnitList.gd" id="2_fx1i6"]
+[ext_resource type="Script" path="res://Select Unit.gd" id="2_vqm08"]
+[ext_resource type="Script" path="res://Send Unit.gd" id="3_k8yap"]
+[ext_resource type="Script" path="res://Confirmation.gd" id="5_ul8et"]
+[ext_resource type="PackedScene" uid="uid://cpw2sgul0fojl" path="res://map.tscn" id="6_qfim2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_qsxfb"]
+font_size = 48
+
+[sub_resource type="LabelSettings" id="LabelSettings_t3hss"]
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_r6sxy"]
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_xldtb"]
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_m18u1"]
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_td28p"]
+font_size = 72
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1529.0
+offset_bottom = -410.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0w06a")
+
+[node name="Map" parent="." instance=ExtResource("6_qfim2")]
+position = Vector2(509, 1)
+
+[node name="Vehicles" type="Node2D" parent="Map"]
+
+[node name="TabContainer" type="TabContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = 113.0
+offset_bottom = 413.0
+grow_horizontal = 2
+grow_vertical = 2
+tabs_visible = false
+
+[node name="Select Unit" type="Control" parent="TabContainer"]
+layout_mode = 2
+script = ExtResource("2_vqm08")
+
+[node name="Label" type="Label" parent="TabContainer/Select Unit"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 33.0
+offset_right = 279.0
+offset_bottom = 103.0
+text = "Select Unit"
+label_settings = SubResource("LabelSettings_qsxfb")
+
+[node name="Police" type="Control" parent="TabContainer/Select Unit"]
+layout_mode = 2
+anchors_preset = 0
+offset_left = 28.0
+offset_top = 112.0
+offset_right = 237.0
+offset_bottom = 378.0
+script = ExtResource("2_fx1i6")
+
+[node name="Label" type="Label" parent="TabContainer/Select Unit/Police"]
+layout_mode = 1
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 100.0
+offset_bottom = 56.0
+text = "Police"
+label_settings = SubResource("LabelSettings_t3hss")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Select Unit/Police"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 62.0
+offset_bottom = 103.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Fire3" type="Control" parent="TabContainer/Select Unit"]
+layout_mode = 2
+anchors_preset = 0
+offset_left = 28.0
+offset_top = 400.0
+offset_right = 237.0
+offset_bottom = 666.0
+script = ExtResource("2_fx1i6")
+unit_type = "Fire"
+
+[node name="Label" type="Label" parent="TabContainer/Select Unit/Fire3"]
+layout_mode = 1
+offset_left = 8.0
+offset_top = 144.0
+offset_right = 197.0
+offset_bottom = 240.0
+text = "Fire 
+Department"
+label_settings = SubResource("LabelSettings_t3hss")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Select Unit/Fire3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 257.0
+offset_bottom = 267.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="EMS" type="Control" parent="TabContainer/Select Unit"]
+layout_mode = 2
+anchors_preset = 0
+offset_left = 284.0
+offset_top = 112.0
+offset_right = 493.0
+offset_bottom = 378.0
+script = ExtResource("2_fx1i6")
+unit_type = "EMS"
+
+[node name="Label" type="Label" parent="TabContainer/Select Unit/EMS"]
+layout_mode = 1
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 100.0
+offset_bottom = 56.0
+text = "EMS
+"
+label_settings = SubResource("LabelSettings_t3hss")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Select Unit/EMS"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 64.0
+offset_bottom = 126.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Animal Control" type="Control" parent="TabContainer/Select Unit"]
+layout_mode = 2
+anchors_preset = 0
+offset_left = 284.0
+offset_top = 376.0
+offset_right = 493.0
+offset_bottom = 642.0
+script = ExtResource("2_fx1i6")
+unit_type = "Animal Control"
+
+[node name="Label" type="Label" parent="TabContainer/Select Unit/Animal Control"]
+layout_mode = 1
+offset_left = 8.0
+offset_top = 168.0
+offset_right = 124.0
+offset_bottom = 264.0
+text = "Animal 
+Control"
+label_settings = SubResource("LabelSettings_t3hss")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Select Unit/Animal Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 274.0
+offset_bottom = 297.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="TabContainer/Select Unit"]
+layout_mode = 2
+offset_left = 358.0
+offset_top = 981.0
+offset_right = 462.0
+offset_bottom = 1034.0
+text = "Next"
+
+[node name="Send Unit" type="Control" parent="TabContainer"]
+visible = false
+layout_mode = 2
+script = ExtResource("3_k8yap")
+
+[node name="BackButton" type="Button" parent="TabContainer/Send Unit"]
+layout_mode = 1
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 124.0
+offset_bottom = 91.0
+text = "Back"
+
+[node name="SendButton" type="Button" parent="TabContainer/Send Unit"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -57.5
+offset_top = -83.0
+offset_right = 57.5
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Send
+"
+
+[node name="Label" type="Label" parent="TabContainer/Send Unit"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -368.0
+offset_top = 32.0
+offset_right = -32.0
+offset_bottom = 96.0
+grow_horizontal = 0
+text = "Unit Type #0"
+label_settings = SubResource("LabelSettings_r6sxy")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Send Unit"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 129.0
+offset_top = -223.5
+offset_right = -129.0
+offset_bottom = -192.5
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="TabContainer/Send Unit/HBoxContainer"]
+layout_mode = 2
+text = "Case #"
+label_settings = SubResource("LabelSettings_xldtb")
+
+[node name="LineEdit" type="LineEdit" parent="TabContainer/Send Unit/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Send Unit"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 112.0
+offset_top = -30.5
+offset_right = -112.0
+offset_bottom = 46.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="TabContainer/Send Unit/VBoxContainer"]
+layout_mode = 2
+text = "Address:"
+label_settings = SubResource("LabelSettings_m18u1")
+
+[node name="OptionButton" type="OptionButton" parent="TabContainer/Send Unit/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Confirmation" type="Control" parent="TabContainer"]
+visible = false
+layout_mode = 2
+script = ExtResource("5_ul8et")
+
+[node name="Label" type="Label" parent="TabContainer/Confirmation"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Unit Sent"
+label_settings = SubResource("LabelSettings_td28p")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="child_entered_tree" from="Map/Vehicles" to="Map" method="_on_vehicles_child_entered_tree"]
+[connection signal="pressed" from="TabContainer/Select Unit/Button" to="TabContainer/Select Unit" method="_on_button_pressed"]
+[connection signal="visibility_changed" from="TabContainer/Send Unit" to="TabContainer/Send Unit" method="_on_visibility_changed"]
+[connection signal="pressed" from="TabContainer/Send Unit/BackButton" to="TabContainer/Send Unit" method="_on_back_button_pressed"]
+[connection signal="pressed" from="TabContainer/Send Unit/SendButton" to="TabContainer/Send Unit" method="_on_send_button_pressed"]
+[connection signal="item_selected" from="TabContainer/Send Unit/VBoxContainer/OptionButton" to="TabContainer/Send Unit" method="_on_option_button_item_selected"]
+
+[editable path="Map"]
