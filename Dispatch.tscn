@@ -1,6 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://bidjayyvpos83"]
+[gd_scene load_steps=16 format=3 uid="uid://bidjayyvpos83"]
 
 [ext_resource type="Script" path="res://Dispatch.gd" id="1_0w06a"]
+[ext_resource type="Theme" uid="uid://c0w11su3oqe8w" path="res://theme.tres" id="1_6stqb"]
 [ext_resource type="Script" path="res://UnitList.gd" id="2_fx1i6"]
 [ext_resource type="Script" path="res://Select Unit.gd" id="2_vqm08"]
 [ext_resource type="Script" path="res://Send Unit.gd" id="3_k8yap"]
@@ -40,6 +41,7 @@ offset_right = -1529.0
 offset_bottom = -410.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_6stqb")
 script = ExtResource("1_0w06a")
 metadata/_edit_vertical_guides_ = [507.0, 1920.0]
 

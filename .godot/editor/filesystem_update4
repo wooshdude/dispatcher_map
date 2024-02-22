@@ -7,3 +7,4 @@ res://map.gd
 res://vehicle.tscn
 res://CharacterBody2D.gd
 res://Send Unit.gd
+res://theme.tres
